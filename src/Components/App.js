@@ -18,7 +18,8 @@ class App extends Component {
           <Route exact path="/search" component={SearchForm} />
           <Route path="/" component={Navigation} />
           <Switch>
-            <Route exact path="/" render={() => <MainContent query="pug" />} />
+            <Route exact path="/" render={() => <MainContent query="jet" />} />
+            <Route  exact path="/search/" render={() => <MainContent query="jet"/>} />
             <Route path="/search/:query" render={props => <MainContent query={props.match.params.query} />} />
             <Route component={Error404} />
           </Switch>
